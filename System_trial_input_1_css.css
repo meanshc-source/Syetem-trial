@@ -1,0 +1,18 @@
+body {background-color:whitesmoke; }
+
+button {font-size: 20px;
+        background-color:antiquewhite;
+        text-decoration-color: black;}
+
+html {scroll-behavior: smooth;}
+
+.top-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007BFF;
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+}
