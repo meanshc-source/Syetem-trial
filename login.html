@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>System trial</title>
+<link rel="stylesheet" href="System_trial_input_1_css.css">
+<meta charset = "utf-8">
+<meta name="viewport" content="width=device-width, initail-scale=1.0">
+<meta name="keywords" content="Sign in">
+<meta name="author" content="Mean">
+
+<script language="Javascript">
+    var today = new Date();
+    var expiry = new Date(today.getTime() + 30 * 24 * 3600 * 1000);
+
+    function showInput() {
+        document.getElementById("sign_in_check1").innerHTML = document.getElementById("sign_in_1").value;
+        document.getElementById("sign_in_check2").innerHTML = document.getElementById("sign_in_2").value; 
+    }
+
+    let retrievedInfo = document.cookie;
+    function showCookie(){
+        document.getElementById('display').innerHTML = retrievedInfo;
+    }
+
+    var setCookies = function(order_info, value) {
+        document.cookie=order_info + "=" + escape(value) + "; path=/; expires=" + expiry.toGMTString();
+    }
+
+    var storeValues = function(form) 
+    {
+        setCookies("order_info" , document.getElementById("quantity1").value + 
+        "," + document.getElementById("quantity2").value +
+        "," + document.getElementById("quantity3").value +
+        "," + document.getElementById("quantity4").value+
+        "," + document.getElementById("quantity5").value); return true;
+    }
+       
+<!--อันแรกคือ id ของข้อมูลที่จะ perform อันที่ 2 คือจะเอาข้อมูลมาจากตัวไหน-->
+</script>
+</head>
+<body>
+
+    <h1>Nalco Ecolab</h1>
+    <form><input type="text" ></form>
+
+
+    
+</body>
+</html>
